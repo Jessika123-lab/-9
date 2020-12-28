@@ -1,0 +1,50 @@
+arraylibrary = []
+
+def serch(choose, criterial):
+    if choose == 1:
+        for i in range(len(arraylibrary)):
+            if arraylibrary[i]["Author"] == criterial:
+                print(arraylibrary[i])
+    if choose == 2:
+        for i in range(arraylibrary):
+            if arraylibrary[i]["Name"] == criterial:
+                print(arraylibrary[i])
+    if choose == 3:
+        for i in range(arraylibrary):
+            if arraylibrary[i]["Genre"] == criterial:
+                print(arraylibrary[i])
+
+    if choose == 4:
+        for i in range(arraylibrary):
+            if arraylibrary[i]["From"] == criterial:
+                print(arraylibrary[i])
+
+    if choose == 5:
+        for i in range(arraylibrary):
+            if arraylibrary[i]["Available"] == criterial:
+                print(arraylibrary[i])
+
+while True:
+    print("\n")
+    print("1. Вивести всю інформацію\n"
+          "2. Ввести данні про книгу\n"
+          "3. Вийти\n")
+
+    choose = int(input("Напишітть цифру:"))
+
+    if choose == 1:
+        for i in range(len(arraylibrary)):
+            print(arraylibrary[i])
+    elif choose == 2:
+        author = input("Author: ")
+        name = input("Name: ")
+        genre = input("Genre: ")
+        wherefrom = input("From: ")
+        available = input("Available: ")
+
+        melomanDict = {"Group": author, "Songs": name, "nameSong": genre, "wherefrom": wherefrom, "available": available}
+        arraylibrary.append(melomanDict)
+    elif choose == 3:
+        break
+    else:
+        print("Ведіть коректне число\n")
