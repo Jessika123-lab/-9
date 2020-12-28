@@ -1,0 +1,91 @@
+arreyBus = []
+
+def serch(choose, creteria):
+    if choose == 1:
+        for i in range(len(arreyBus)):
+            if arreyBus[i]["номер рейсу"] == creteria:
+                print(arreyBus[i])
+
+    elif choose == 2:
+        for i in range(len(arreyBus)):
+            if arreyBus[i]["водій"] == creteria:
+                print(arreyBus[i])
+
+    elif choose == 3:
+        for i in range(len(arreyBus)):
+            if arreyBus[i]["вартість квитка"] == creteria:
+                print(arreyBus[i])
+
+    elif choose == 4:
+        for i in range(len(arreyBus)):
+            if arreyBus[i]["час відправлення"] == creteria:
+                print(arreyBus[i])
+
+    elif choose == 4:
+        for i in range(len(arreyBus)):
+            if arreyBus[i]["час прибуття"] == creteria:
+                print(arreyBus[i])
+
+
+
+
+
+
+while True:
+    choise = int(input('\n1.Вивести номер рейсу\n'
+              '2.Ввести номер рейсу\n'
+              '3.Вивести номер рейсу\n'
+              '4.Закінчити\n\nВведіть число : '))
+
+    if choise == 1:
+        print()
+        for i in range(len(arreyBus)):
+            print(arreyBus[i])
+
+    elif choise == 2:
+        busnumber = input('Номер рейсу : ')
+        busdriver = input('Водій  : ')
+        price = input('Вартість квитка : ')
+        departue = input('Час відправлення : ')
+        arrival = input('Час прибуття : ')
+
+        details = {"номер рейсу": busnumber, "водій": busdriver, "вартість квитка": price, " Час відправлення": departue, "Час прибуття": arrival}
+        arreyBus.append(details)
+
+    elif choise == 3:
+        choise2 = int(input('Знайти за : \n'
+              '1. Номером \n'
+              '2. Водієм\n'
+              '3. Вартістю\n'
+              '4. Часом відправлення\n'
+              '5. Часом прибуття\n\n'
+              'Введіть число : '))
+        print()
+
+        if choise2 == 1:
+            charakteristic = input('Введіть номер рейсу: ')
+            serch(choise2, charakteristic)
+
+        elif choise2 == 2:
+            charakteristic = input('Введіть водія: ')
+            serch(choise2, charakteristic)
+
+
+        elif choise2 == 3:
+            charakteristic = input('Введіть вартість квитка: ')
+            serch(choise2, charakteristic)
+
+        elif choise2 == 4:
+            charakteristic = input('Введіть час відправлення: ')
+            serch(choise2, charakteristic)
+
+        elif choise2 == 5:
+            charakteristic = input('Введіть час прибуття: ')
+            serch(choise2, charakteristic)
+
+
+    elif choise == 6:
+        break
+
+    else:
+        print('Write normal number\n')
